@@ -206,8 +206,8 @@
       "languageVersion": "2.0"
     },
     {
-      "name": "sb_extensions",
-      "rootUri": "file:///C:/Users/dschl/AppData/Local/Pub/Cache/git/sb_extensions-e245c91a3f76e8744d81303eac273528595f8ebf/",
+      "name": "sb_dart_extensions",
+      "rootUri": "file:///C:/Users/dschl/AppData/Local/Pub/Cache/git/sb_dart_extensions-57f00e45d28a8a9535901597bc84bd9153ce94b2/",
       "packageUri": "lib/",
       "languageVersion": "2.8"
     },
@@ -344,7 +344,7 @@
       "languageVersion": "2.8"
     }
   ],
-  "generated": "2021-01-16T20:06:07.581851Z",
+  "generated": "2021-01-17T13:07:26.268046Z",
   "generator": "pub",
   "generatorVersion": "2.12.0-133.2.beta"
 }

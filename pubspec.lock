@@ -239,13 +239,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.4"
-  sb_extensions:
+  sb_dart_extensions:
     dependency: "direct main"
     description:
       path: "."
       ref: master
-      resolved-ref: e245c91a3f76e8744d81303eac273528595f8ebf
-      url: "git://github.com/snadboy/sb_extensions.git"
+      resolved-ref: "57f00e45d28a8a9535901597bc84bd9153ce94b2"
+      url: "git://github.com/snadboy/sb_dart_extensions.git"
     source: git
     version: "0.0.0"
   shelf:

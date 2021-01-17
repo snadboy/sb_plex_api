@@ -6,9 +6,9 @@ environment:
 
 dependencies:
   image: ^2.1.19
-  sb_extensions:
+  sb_dart_extensions:
     git:
-      url: git://github.com/snadboy/sb_extensions.git
+      url: git://github.com/snadboy/sb_dart_extensions.git
       ref: master
       
 dev_dependencies:

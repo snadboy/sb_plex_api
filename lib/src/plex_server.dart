@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:image/image.dart' as image;
-import 'package:sb_extensions/sb_extensions.dart';
+import 'package:sb_dart_extensions/sb_dart_extensions.dart';
 
 import 'package:sb_plex_api/sb_plex_api.dart';
 
