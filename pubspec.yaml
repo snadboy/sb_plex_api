@@ -1,5 +1,5 @@
 name: sb_plex_api
-description: A library for accessing the Plex API
+description: A SnadBoy package for accessing the Plex API
 
 environment:
   sdk: '>=2.8.1 <3.0.0'
