@@ -6,7 +6,7 @@ Future<void> main() async {
     32400,
     'qzhfmzSEHu_Sykd8bSH9',
   );
-  await pl.loadData(loadProgress: (s) => print(s));
+  await pl.loadData();
   print('Plex data loaded');
   print('');
 
