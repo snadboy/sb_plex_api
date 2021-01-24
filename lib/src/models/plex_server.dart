@@ -45,4 +45,6 @@ class PlexServer {
       existingMovie == null ? _movies.add(PlexMovie(m)) : existingMovie.sectionIds.add(m['librarySectionID']);
     });
   }
+
+  PlexSection sectionById(int id) => _sections.firstWhere((s) => s.id == id, orElse: () => null);
 }
