@@ -10,6 +10,7 @@ class PlexServer {
   final String plexServerUrl;
   final int plexPort;
   final String xPlexToken;
+  final String xPlexTokenHdr = 'X-PLEX-TOKEN';
   final _sections = <PlexSection>[];
   final _shows = <PlexShow>[];
   final _movies = <PlexMovie>[];
