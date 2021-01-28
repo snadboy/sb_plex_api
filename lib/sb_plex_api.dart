@@ -3,4 +3,5 @@ export 'src/models/plex_movie.dart';
 export 'src/models/plex_section.dart';
 export 'src/models/plex_server.dart';
 export 'src/models/plex_show.dart';
+export 'src/models/plex_media_item.dart';
 export 'src/services/plex_fetch.dart';
