@@ -37,13 +37,35 @@ class PlexServer {
           _shows.sort((ps1, ps2) => ps1.originallyAt.compareTo(ps2.originallyAt) * (ascending ? 1 : -1));
           break;
       }
+    }
+  }
 
-      
+  List<PlexMovie> get movies => _movies;
+  PlexMovieSequence _movieSequence = PlexMovieSequence.Title;
+  bool _movieSequenceAscending = true;
+  void sortMovies(PlexMovieSequence sequence, bool ascending) {
+    if (sequence != _movieSequence || ascending != _movieSequenceAscending) {
+      _movieSequenceAscending = ascending;
+      _movieSequence = sequence;
+
+      switch (sequence) {
+        case PlexMovieSequence.Title:
+          _movies.sort((ps1, ps2) => ps1.titleSort.compareTo(ps2.titleSort) * (ascending ? 1 : -1));
+          break;
+        case PlexMovieSequence.Added:
+          _movies.sort((ps1, ps2) => ps1.addedAt.compareTo(ps2.addedAt) * (ascending ? 1 : -1));
+          break;
+        case PlexMovieSequence.Updated:
+          _movies.sort((ps1, ps2) => ps1.updatedAt.compareTo(ps2.updatedAt) * (ascending ? 1 : -1));
+          break;
+        case PlexMovieSequence.OriginallyAvailable:
+          _movies.sort((ps1, ps2) => ps1.originallyAt.compareTo(ps2.originallyAt) * (ascending ? 1 : -1));
+          break;
+      }
     }
   }
 
   List<PlexSection> get sections => _sections;
-  List<PlexMovie> get movies => _movies;
 
   String plexUrl(String path) => 'http://$plexServerUrl:$plexPort$path';
 
