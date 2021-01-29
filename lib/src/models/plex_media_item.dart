@@ -1,6 +1,7 @@
 class PlexMediaItem {
   PlexMediaItem({
     this.title,
+    this.titleSort,
     this.key,
     this.uuid,
     this.sectionIds,
@@ -8,9 +9,11 @@ class PlexMediaItem {
     this.artKey,
     this.addedAt,
     this.updatedAt,
+    this.originallyAt,
   });
 
   final String title;
+  final String titleSort;
   final String key;
   final String uuid;
   final List<int> sectionIds;
@@ -18,11 +21,8 @@ class PlexMediaItem {
   final String artKey;
   final DateTime addedAt;
   final DateTime updatedAt;
-
-  // final String bannerKey;
-  // final String themeKey;
+  final DateTime originallyAt;
 
   @override
   bool operator ==(ps) => uuid == ps.uuid;
-
 }

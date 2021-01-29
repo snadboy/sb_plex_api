@@ -16,6 +16,32 @@ class PlexServer {
   final _movies = <PlexMovie>[];
 
   List<PlexShow> get shows => _shows;
+  PlexShowSequence _showSequence = PlexShowSequence.Title;
+  bool _showSequenceAscending = true;
+  void sortShows(PlexShowSequence sequence, bool ascending) {
+    if (sequence != _showSequence || ascending != _showSequenceAscending) {
+      _showSequenceAscending = ascending;
+      _showSequence = sequence;
+
+      switch (sequence) {
+        case PlexShowSequence.Title:
+          _shows.sort((ps1, ps2) => ps1.titleSort.compareTo(ps2.titleSort) * (ascending ? 1 : -1));
+          break;
+        case PlexShowSequence.Added:
+          _shows.sort((ps1, ps2) => ps1.addedAt.compareTo(ps2.addedAt) * (ascending ? 1 : -1));
+          break;
+        case PlexShowSequence.Updated:
+          _shows.sort((ps1, ps2) => ps1.updatedAt.compareTo(ps2.updatedAt) * (ascending ? 1 : -1));
+          break;
+        case PlexShowSequence.OriginallyAvailable:
+          _shows.sort((ps1, ps2) => ps1.originallyAt.compareTo(ps2.originallyAt) * (ascending ? 1 : -1));
+          break;
+      }
+
+      
+    }
+  }
+
   List<PlexSection> get sections => _sections;
   List<PlexMovie> get movies => _movies;
 
